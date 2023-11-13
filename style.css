@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
+
+:root {
+    --bg-clr:#010101;
+    --pri-clr: #ffffff;
+    --media-width-2:1024px;
+    --media-width-1:1440px;
+    --ff-1: 'Krona One', sans-serif;
+    --ff-2: 'Krona One', sans-serif;
+    --fs-1: 70px;
+    --max-width:1240px;
+    --margin:80px;
+    --magin-neg:-100px;
+    --margin-block:100px;
+}
+
+
+
+@media (max-width:1180px) {
+    :root{
+        --fs-1:46px;
+        --fs-2:36px;
+        --fs-3:30px;
+        --margin:60px;
+        --margin-block:80px;
+        --magin-neg:-30px;
+        
+    }
+    
+}
+
+@media (max-width:900px) {
+    :root{
+        --fs-1:36px;
+        --margin:40px;
+        --margin-block:40px;
+        --magin-neg:20px;
+        --fs-2:28px;
+        --fs-3:24px
+        --fs-4:20px;
+    }
+    
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul:where([role="list"]),
+ol:where([role="list"]) {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html{
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+
+  text-rendering: optimizeSpeed;
+  
+  font-size: 18px;
+  font-family: var(--ff-1);
+  color: var(--pri-clr);
+  background: var(--bg-clr);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  text-decoration: none;
+
+}
+
+a{
+  text-decoration: none;
+  color: #ffffff;
+  
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
+
+h1,h2,h3,h4{
+    font-family: var(--ff-2);
+    line-height: 1.2;
+}
+
+h1{
+    font-size: var(--fs-1);
+    margin-block: 18px;
+}
+
+
+
+
+.padding-global{
+    padding-block: 5em;
+    padding-inline: 3em;
+    
+}
+.block{
+    margin-block: var(--margin-block);
+}
+section{
+    padding-inline: 10px;
+    background-image: url('/asset/general-bg.png');
+}
+
+
+
+    
+
+button, .button, .btn{
+    padding:15px;
+    font-size: 16px;
+    font-family: var(--ff-1);
+    font-weight: 400;
+    border: 1px solid var(--pri-clr);
+    color: var(--pri-clr);
+    background: #010101;
+    transition: all 500ms ease-out;
+
+     
+}
+button:hover {
+    
+      
+    
+}
+
+/*nav-bar*/
+
+
+
+.top-bar{
+    display: flex;
+    max-width: 1240px;
+   align-items: center;
+   justify-content: space-between;
+    margin-inline: auto;
+    gap:20px;
+    margin-top: 20px;
+    
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:65%;
+    
+   }
+  
+
+    
+  
+  
+  
+  .brand-titles img{
+      width: 40px;
+  }
+  
+  
+    
+  
+  .navbar-links ul {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+   
+  }
+  
+  .navbar-links li {
+    list-style: none;
+    transition: all 500ms ease;
+    
+  }
+  
+  .navbar-links li  a {
+     text-decoration: none;
+     color: var(--pri-clr);
+     padding: 1rem;
+     display: block;
+     font-size: 14px;
+  }
+  
+  .navbar-links li:hover {
+    
+   
+  }
+  
+  
+  
+  .nav-socials{
+     display: none;
+  }
+  
+  
+  
+  .toggle-button {
+    position: absolute;
+    top:20px;
+    right:10px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width:20px;
+    height: 18px;
+  }
+  
+  
+  .toggle-button .bar {
+       height: 3px;
+       width: 100%;
+       background-color: var(--pri-clr);
+       border-radius: 10px;
+  }
+
+  .abso{
+    white-space: nowrap;
+  }
+  
+  @media(max-width:900px) {
+
+    .top-bar{
+        display: flex;
+        max-width: 1240px;
+        margin-left: 10px;
+        gap:20px;
+        margin-top: 20px;
+        
+    }
+
+    .nav-socials{
+      
+      padding-top: 40px;
+      border-top: 1px solid var(--pri-clr);
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      & span{
+        display: flex;
+        flex-wrap: nowrap;
+        
+      }
+  
+
+      .nav-last{
+        margin-bottom: 400px;
+       
+      }
+      
+   }
+    .brand-link{
+      position: absolute;
+      left:10px;
+    }
+    .toggle-button {
+        display: flex;
+    }
+  
+    .navbar-links {
+     
+     display: none;
+    }
+    
+    .navbar {
+      flex-direction: column;
+      
+      width:100%;
+      
+     
+     
+     
+      
+    }
+
+    .abso{
+        position: absolute;
+        top:10px;
+        right:40px;
+        display: none;
+       
+    }
+
+    
+    .navbar-links ul {
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 40px;
+      margin-top: 60px;
+    }
+  
+    .navbar-links li {
+      text-align: center;
+      
+    }
+  
+    .navbar-links li a {
+      text-align: center;
+      font-size: 16px;
+    }
+    .navbar-links.active{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid var(--pri-clr);
+
+     
+   }
+
+   .bar.one.active{
+    
+    transform: rotate(-45deg) ;
+    transform-origin: 100%;
+    
+   }
+   .bar.two.active{
+   
+    transform: rotate(45deg) ;
+    transform-origin: 100%;
+   }
+   .bar.three.active{
+    display: none;
+   }
+  
+    .nav-last{
+      margin-bottom: 40px;
+     
+     
+    }
+    
+  }
+ 
+  .ava.navactive{
+    
+    content: "";
+    border: 1px solid var(--bg-clr);
+    position: relative;
+    padding: 0px 0px;
+    background-color: var(--bg-clr);
+  }
+
+  
+  
+  .ava.navactive:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom:-8px;
+    width: 30%;
+    border-bottom: 3px solid blueviolet;
+  }
+    
+
+  :is(.btn).ava.navactive{
+    
+    color:#5AB0FF;
+    padding:15px;
+    font-size: 16px;
+    font-family: var(--ff-1);
+    font-weight: 400;
+    border: 1px solid #5AB0FF;
+    
+    background: #010101;
+    transition: all 500ms ease-out;
+    
+  }
+
+  
+  
+  :is(.btn).ava.navactive:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom:-8px;
+    width: 0%;
+    border-bottom: 3px solid var(--pri-clr);
+  }
+  
+  .max-width {
+    max-width: var(--max-width);
+    margin-inline: auto;
+    
+  }
+
+  @media(max-width:900px){
+    .ava.navactive{
+    
+      content: "";
+      border: 1px solid var(--bg-clr);
+      position: relative;
+      padding: 0px 0px;
+      background-color: var(--bg-clr);
+    }
+  
+    
+    
+    .ava.navactive:after {
+      content: '';
+      position: absolute;
+      left: 0px;
+      bottom:-8px;
+      width: 30%;
+      border-bottom: 0px solid var(--pri-clr);
+    }
+  }
+
+
+  .hero-component{
+    text-align: center;
+  }
